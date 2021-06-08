@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igloop</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+
+    <style>
+
+        /*measurements*/
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            background-color: #2c2c2c;
+        }
+
+        #header-strip{
+            width: 100%;
+            height: 10%;
+            overflow: hidden;
+        }
+
+        #primary-content-con{
+            width: 100%;
+            height: 90%;
+            /*background-color: rgb(35, 76, 112);*/
+            overflow: hidden;
+        }
+
+        /*header*/
+        .logo-box{
+            width: 10%;
+            height: 28%;
+            float: left;
+            display: block;
+            margin-left: 12em;
+            margin-top: 2.5em;
+        }
+
+        .img-box{
+            width: 20%;
+            height: 100%;
+            float: left;
+            background-image: url("https://i.ibb.co/WPc6BhN/igloop.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .logo-text{
+            width: 80%;
+            height: 100%;
+            float: left;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 8px;
+            font-family: 'URW Dock', 'Titillium Web';
+            padding-top: 6px;
+        }
+
+        .img-box:hover, .logo-text:hover{
+            cursor: pointer;
+        }
+
+        .logo-text span{
+            padding-left: 10px;
+        }
+
+        .lang-box{
+            width: 4%;
+            height: 22%;
+            float: right;
+            display: block;
+            margin-right: 13em;
+            margin-top: 2.5em;       
+        }
+
+        .flag-con{
+            width: 30px;
+            height: 100%;
+            float: left;
+            background-image: url("https://i.ibb.co/12yZ9K9/ukflag.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .text-con{
+            width: 45%;
+            height: 100%;
+            font-size: 20px;
+            float: left;
+            color: white;
+            font-family: 'URW Dock', 'Titillium Web';
+
+        }
+
+        .text-con span{
+            padding-left: 5px;
+        }
+
+        /*body*/
+        .sign-in-con{
+            width: 20%;
+            height: 90%;
+            margin: 0 auto;
+        }
+
+        .head-img-con{
+            width: 100%;
+            height: 25%;
+        }
+
+        .igloop-logo{
+            width: 250px;
+            height: 100%;
+            margin: 0 auto;
+            background-image: url("https://i.ibb.co/WPc6BhN/igloop.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .top-text-con{
+            width: 100%;
+            height: 18%;
+        }
+
+        .sign-in-top-text{
+            color: white;
+            font-family: 'URW Dock', 'Titillium Web';
+            font-weight: 600;
+            letter-spacing: 4px;
+            font-size: 42px;
+            padding-left: 27%;
+        }
+
+        .slogan-text{
+            color: white;
+            font-family: 'Abel', 'Titillium Web';
+            text-align: center;
+            font-size: 17px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+
+        form{
+            width: 100%;
+            height: 55%;
+            padding-top: 25px;
+        }
+
+        input{
+            margin: 0 auto;
+            width: 100%;
+            height: 15%;
+            margin-top: 10px;
+        }
+
+        #username_field{
+            margin-bottom: 10px;
+        }
+
+        ::placeholder{
+            color: white;
+            font-family: 'Abel', 'Titillium Web';
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        #username_field, #password_field{
+            width: 95%;
+            border: 3px solid white;
+            background-color: rgba(0, 0, 0, 0);
+            padding-left: 10px;
+            color: white;
+            font-family: 'Abel', 'Titillium Web';
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        #username_field:focus::-webkit-input-placeholder { color:transparent; }
+
+        #password_field:focus::-webkit-input-placeholder { color:transparent; }
+
+        .remember-con{
+            height: 17%;
+            width: 100%;
+        }
+
+        #login-btn{
+            margin-top: 2px;
+            font-family: 'Abel', 'Titillium Web';
+            font-size: 19px;
+            font-weight: 400;
+            text-shadow: rgba(0, 0, 0, 0.616);
+            background-color: white;
+            border: 1px solid white;
+        }
+
+        #login-btn:hover{
+            cursor: pointer;
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 0.884);
+        }
+
+        .remember_text{
+            margin-top: 15px;
+            color: white;
+        }
+
+        .remember-input-con{
+            width: 8%;
+            height: 93%;
+            float: left;
+            
+        }
+
+        .remember-input-con input{
+            width: 100px;
+        }
+
+        .tick-box{
+            height: 16px;
+            width: 16px;
+            border: 3.5px solid white;
+            display: inline-flex;
+            margin-top: 15px;
+        }
+
+        .rem-text-con{
+            width: 47%;
+            height: 40%;
+            float: left;
+            color: white;
+            margin-top: 14px;
+            font-family: 'Titillium Web';
+        }
+
+        .rem-text, .forgot-text{
+            padding-top: 10px;
+        }
+
+        .forgot-text-con{
+            width: 45%;
+            height: 40%;
+            float: left;
+            margin-top: 14px;
+            font-family: 'Titillium Web', sans-serif;
+        }
+
+        .forgot-text-con a{
+            text-decoration: none;
+            color: white;
+            padding-left: 25px;
+        }
+
+        .forgot-text-con a:hover{
+            color: rgba(255, 255, 255, 0.685);
+        }
+
+        .no_account_text{
+            color: white;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1.2px;
+        }
+
+        .copyright-text{
+            color: rgba(255, 255, 255, 0.479);
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        #here_text{
+            color: white;
+        }
+
+        #here_text:hover{
+            color: rgba(255, 255, 255, 0.664);
+        }
+
+        /*medium nav for tablet*/
+        @media screen and (min-width: 1300px) and (max-width: 1600px) { 
+            .sign-in-con{
+                width: 350px;
+                height: 90%;
+                margin: 0 auto;
+            }
+
+            .forgot-text-con a{
+                padding-left: 15px;
+            }
+
+            .logo-box{
+                width: 150px;
+            }
+
+            .flag-con{
+                width: 25px;
+            }
+}
+        /* Between Tablet and Mobile */
+        @media screen and (min-width: 544px) and (max-width: 1300px) { 
+            .sign-in-con{
+                width: 400px;
+                height: 90%;
+                margin: 0 auto;
+            }
+
+            .forgot-text-con a{
+                padding-left: 15px;
+            }
+
+            .logo-box{
+                width: 150px;
+                padding-left: -25px;
+            }
+
+            .lang-box{
+                display: none;
+            }
+
+            .logo-box{
+                display: none;
+            }
+        }
+
+        /*mobile*/
+        @media screen and (max-width: 544px) {
+            .sign-in-con{
+                width: 370px;
+                height: 90%;
+                margin: 0 auto;
+            }
+
+            .forgot-text-con a{
+                padding-left: 10px;
+            }
+
+            .igloop-logo{
+                width: 250px; 
+            }
+
+            .lang-box{
+                display: none;
+            }
+
+            .logo-box{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header-strip">
+        <div class="logo-box">
+            <div class="img-box">
+            </div>
+            <div class="logo-text">
+                <span>IGLOOP</span>
+            </div>
+        </div>
+
+        <div class="lang-box">
+            <div class="flag-con">
+            </div>
+            <div class="text-con">
+                <span>EN</span>
+            </div>
+        </div>
+    </div><!--header-strip-->
+
+    <div id="primary-content-con">
+        <div class="sign-in-con">
+            <div class="head-img-con">
+                <div class="igloop-logo">
+
+                </div>
+            </div>
+
+            <div class="top-text-con">
+                <h1 class="sign-in-top-text" style="display: inline-block;">
+                    SIGN IN
+                </h1>
+
+                <p class="slogan-text">And stay in the loop with your friends</p>
+            </div>
+
+            <form method="POST" action="/chats">
+                <input type="text" name='username' placeholder="USERNAME" id="username_field">
+                <input type="password" placeholder="PASSWORD" name='password' id="password_field">
+                <div class="remember-con">
+                    <div class="remember-input-con">
+                        <div class="tick-box">
+
+                        </div>
+                    </div>
+
+                    <div class="rem-text-con">
+                        Remember me
+                    </div>
+
+                    <div class="forgot-text-con">
+                        <a href="">Forgot password?</a>
+                    </div>
+                    
+                </div>
+                <input type="submit" value="SIGN IN" id="login-btn">
+                <h4 class="no_account_text">Don't have an account? Sign up <a href=# id="here_text">here</a></h4>
+            </form>
+
+            <h4 class="copyright-text">2021© ALL RIGHTS RESERVED</h4>
+        </div>
+    </div>
+
+</body>
+</html>

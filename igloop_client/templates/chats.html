@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Igloop chat app</title>
+        <!--google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        .plus-user-btn-con{
+            width: 48px;
+            height: 48px;
+            margin: 0 auto;
+            margin-top: 70px;
+            background-image: url("https://i.ibb.co/y55d3Xq/16-168360-user-add-user-icon-add-symbol-member-friend.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+        .plus-user-btn-con:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .speech-bubble-con{
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            margin-top: 65px;
+            background-image: url("https://i.ibb.co/fQ4f8gW/chat-icon.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+        .speech-bubble-con:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .user-display{
+            padding-top: 15px;
+            padding-left: 25px;
+            background-color: #2c2c2c; 
+            height: 100vh; 
+            color: white;
+        }
+
+        .user-display h1{
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 52px;
+        }
+
+        .user-display h3{
+            font-family: 'Roboto', sans-serif;
+            padding-top: 30px;
+            font-size: 28px;
+        }
+
+        .user-display h3 span{
+            font-style: italic;
+        }
+
+        .user-display p{
+            font-family: 'Roboto', sans-serif;
+            padding-top: 35px;
+            font-size: 18px;
+        }
+
+        .user-display ul{
+            font-family: 'Roboto', sans-serif;
+            list-style-type: square;
+        }
+
+        .user-display li{
+            padding-top: 10px;
+        }
+
+        .user-icon-con{
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 40px;
+            background-image: url("https://i.ibb.co/L0RMFX8/user-icon.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+        }
+
+        .user-icon-con:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .settings-con{
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            margin-top: 720px;
+            background-image: url("https://i.ibb.co/sj3STyg/settings-icon.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+        }
+
+        .settings-con:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .version{
+            text-align: center;
+            font-family: 'Roboto', 'sans-serif';
+            margin-top: 50px;
+        }
+
+        #chatWindow{
+            padding-top: 20px;
+            font-size: 20px;
+            font-family: 'Roboto', 'sans-serif';
+        }
+
+        #username_field{
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+
+        #message_field{
+            color: rgb(255, 255, 255);
+            margin-left: 5px;
+        }
+
+        #messageInput{
+            margin-left: 15px;
+            width: 1000px;
+            padding-top: 10px;
+            padding-left: 10px;
+            font-family: 'Roboto', 'sans-serif';
+        }
+
+        .send-btn{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgb(26, 26, 26);
+            margin-left: 15px;
+        }
+
+        .send-btn:hover{
+            cursor: pointer;
+            background-color: rgb(41, 41, 41);
+        }
+
+        .airplane-icon{
+            width: 35px;
+            height: 35px;
+            margin: 0 auto;
+            margin-top: 12px;
+            background-image: url("https://i.ibb.co/YcW5rs6/icon-Airplane.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*"https://i.ibb.co/YcW5rs6/icon-Airplane.png"*/
+
+    </style>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row" style="height: 100vh;">
+                <div class="col-1" style="background-color: #5c5c5c;">
+                    <img src="https://i.ibb.co/WPc6BhN/igloop.png" width="120px" height="90px" style="padding-left: 15px; padding-top: 10px;">
+                    <!--<img src="https://i.ibb.co/y55d3Xq/16-168360-user-add-user-icon-add-symbol-member-friend.png">-->
+                    <div class="plus-user-btn-con">
+
+                    </div>
+                    <div class="speech-bubble-con">
+
+                    </div>
+                </div>
+
+                <div class="user-display col-2">
+                    <h1>CHATS</h1>
+                    <h3>Welcome, <span>${username}</span> </h3>
+                    <p>Users in chat:</p>
+                    <ul id="userList">
+                        
+                    </ul>
+                </div>
+                <div class="col-8" style="height: 100vh; background-color: #5c5c5c; color: white;">
+                  
+                    <div id="chatWindow" class="" style="height: 90vh;width: 100%;">
+                        
+                    </div>
+
+                    <div class="container row" style="bottom: 0; position: fixed;margin-bottom: 20px;">
+                        <textarea id="messageInput" name="message" type="text" placeholder="Type your message"></textarea>
+                        <div class="send-btn" onclick="sendMessage();">
+                            <div class="airplane-icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1" style="background-color: #2c2c2c; height: 100vh; color: white;">
+                    <div class="user-icon-con">
+
+                    </div>
+                    <div class="settings-con">
+
+                    </div>
+                    <p class="version">V1.1</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- Socket IO -->
+        <script src="https://cdn.socket.io/4.1.1/socket.io.min.js" integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a" crossorigin="anonymous"></script>
+        
+        <script>
+            const socket = io("http://localhost:8888", {transports: ["websocket"]});
+
+            //request the user list
+            socket.emit("userlist:request", "please");
+
+            //listen for the user list when a new user logs in
+            socket.on("user:list", (userList) => {
+                console.log(userList);
+                document.getElementById("userList").innerHTML = ``;
+
+                //update the user list UI
+                for(i = 0; i < userList.length; i++){
+                    document.getElementById("userList").innerHTML += `<li>`+userList[i]+`</li>`;
+                }
+            });
+
+            //request the chat history
+            socket.emit("history:request", "please");
+
+            //listen for history response
+            socket.on("history:response", (history) => {
+                console.log(history);
+
+                for(i = 0; i < history.length; i++){
+                    document.getElementById("chatWindow").innerHTML += `<p>`+history[i].author+`: `+history[i].message+`</p>`;
+                }
+            });
+
+            //get username of logged in user
+            const username = `${username}`;
+
+            //send a new message function
+            function sendMessage() {
+                var messageInput = document.getElementById("messageInput").value;
+
+                //convert message to object
+                var newMessage = {author: username, message: messageInput}
+
+                socket.emit("message:send", newMessage);
+            };
+
+            //listen for new messages
+            socket.on("new:message", (newMessage) => {
+                document.getElementById("chatWindow").innerHTML += `<p><strong>`+newMessage.author+`</strong>: `+newMessage.message+`</p>`;
+            });
+
+
+        </script>
+    </body>
+
+</html>
