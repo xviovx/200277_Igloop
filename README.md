@@ -1,10 +1,9 @@
-<span style="font-size: 42px"><em><strong>Igloop chat app</strong></em></span> <img align="center" src="https://i.ibb.co/WPc6BhN/igloop.png" width="50px" height="40px" style="padding-left: 20px; padding-bottom: 20px">
+# **_Igloop_ chat app** <img align="center" src="https://i.ibb.co/WPc6BhN/igloop.png" width="50px" height="40px" style="padding-left: 20px; padding-bottom: 20px">
 <br>
 <br>
 
 
 ## **Table of Contents**
-<hr>
 
 1. [About the project](#about)
     * [Project Description](#description)
@@ -28,7 +27,6 @@
 
 <a name="about"></a>
 ##  **About the project**
-<hr>
 
 <a name="description"></a>
 
@@ -51,7 +49,6 @@ Igloop, built with NodeJS and socket.io utilises two seperate folders, one for t
 
 <a name="getting-started"></a>
 ##  **Getting started**
-<hr>
 
 <a name="prerequisites"></a>
 
@@ -76,7 +73,6 @@ The following additional dependancy is required to retrieve the HTML template pa
 
 <a name="features-and-functions"></a>
 ##  **Features and functions**
-<hr>
 
 <a name="server"></a>
 
@@ -159,7 +155,6 @@ All socket functionality (socket emits and on requests) was done on the chats.ht
 
 <a name="concept-process"></a>
 ##  **Concept Process**
-<hr>
 
 <a name="brand"></a>
 
@@ -198,7 +193,6 @@ This was an imperative step in the development process of the app.
 
 <a name="development-process"></a>
 ##  **Development process**
-<hr>
 
 <a name="implementation"></a>
 
@@ -227,7 +221,6 @@ My app implementation process took the following course:
 
 <a name="vid-demonstration"></a>
 ##  **Video Demonstration**
-<hr>
 
 [Click here](#) to view video demonstration
 
@@ -235,7 +228,6 @@ My app implementation process took the following course:
 
 <a name="authors"></a>
 ##  **Authors**
-<hr>
 
 Developed by Kyle Pharoah (@xviovx)
 
@@ -243,7 +235,6 @@ Developed by Kyle Pharoah (@xviovx)
 
 <a name="contact"></a>
 ##  **Contact**
-<hr>
 
 **Work email**: 200277@virtualwindow.co.za
 <br>
@@ -263,7 +254,6 @@ https://github.com/xviovx/200277_Igloop
 
 <a name="acknowledgements"></a>
 ##  **Acknowledgements**
-<hr>
 
 * [**Open Window**](https://www.openwindow.co.za/)
 
