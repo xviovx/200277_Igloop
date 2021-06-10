@@ -60,15 +60,13 @@ After installing NPM, you can navigate to the NodeJS [download page](https://nod
 
 After installing NodeJS you can verify that it is installed and working using the following commands:
 
->node -v
-<br>
+>node -v<br>
 >npm -v
 
 Ensure you also have the following additional dependancies installed:
 
->npm install "es6-template-strings"
-<br>
-npm install "node-static"
+>npm install "es6-template-strings"<br>
+>npm install "node-static"
 
 <br>
 
