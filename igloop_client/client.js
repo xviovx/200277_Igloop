@@ -67,9 +67,7 @@ var handleFormPost = function(request, response){
             fs.readFile("templates/error.html", "utf8", function(err, data) {
                 if(err) {throw err;};
     
-                var compiled = templates(data, {username: post['username']});
-    
-                response.write(compiled);
+                response.write(data);
                 response.end();
             });
         }

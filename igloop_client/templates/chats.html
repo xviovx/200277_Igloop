@@ -394,7 +394,7 @@
 
             //listen for new messages
             socket.on("new:message", (newMessage) => {
-                document.getElementById("chatWindow").innerHTML += `<p><strong>`+newMessage.author+`</strong>: `+newMessage.message+`</p>`;
+                document.getElementById("chatWindow").innerHTML += `<p>`+newMessage.author+`: `+newMessage.message+`</p>`;
             });
 
 

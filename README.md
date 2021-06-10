@@ -64,9 +64,11 @@ After installing NodeJS you can verify that it is installed and working using th
 <br>
 >npm -v
 
-The following additional dependancy is required to retrieve the HTML template pages from the client side:
+Ensure you also have the following additional dependancies installed:
 
->npm install es6-template-strings
+>npm install "es6-template-strings"
+<br>
+npm install "node-static"
 
 <br>
 
@@ -221,7 +223,7 @@ My app implementation process took the following course:
 <a name="vid-demonstration"></a>
 ##  **Video Demonstration**
 
-[Click here](#) to view video demonstration
+[Click here](https://youtu.be/ac9UyFX9LYU) to view video demonstration
 
 <br>
 
