@@ -1,6 +1,5 @@
 # **_Igloop_ chat app** <img align="center" src="https://i.ibb.co/WPc6BhN/igloop.png" width="50px" height="40px" style="padding-left: 20px; padding-bottom: 20px">
 <br>
-<br>
 
 
 ## **Table of Contents**
