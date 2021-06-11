@@ -66,6 +66,8 @@ var handleFormPost = function(request, response){
         }else{
             fs.readFile("templates/error.html", "utf8", function(err, data) {
                 if(err) {throw err;};
+
+                socket.emit("login:invalid", post);
     
                 response.write(data);
                 response.end();

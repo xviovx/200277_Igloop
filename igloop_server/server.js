@@ -18,6 +18,10 @@ io.on("connection", (socket) => {
         console.log(loginData.username + " is requesting login permission");
     });
 
+    socket.on("login:invalid", (loginData) => {
+        users.pop();
+    });
+
     socket.on("userlist:request", (message) => {
         io.emit("user:list", users);
     });
